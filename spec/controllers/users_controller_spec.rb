@@ -66,7 +66,6 @@ describe UsersController do
         }}
 
         before do
-          #User.stub(:find_or_create_by_email).with(user_params["email"]) { user }
           User.stub(:find_or_create_by).with(email: user_params["email"]) { user }
         end
 
@@ -81,7 +80,6 @@ describe UsersController do
           before do
             user.stub(:new_record? => true)
             user.stub(:save => true)
-            #User.stub(:find_or_create_by_email).with(user_params["email"]).and_yield(user).and_return(user)
             User.stub(:find_or_create_by).with(email: user_params["email"]).and_yield(user).and_return(user)
           end
 
