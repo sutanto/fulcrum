@@ -17,6 +17,7 @@ gem 'configuration'
 gem 'rails-observers', '~> 0.1.2'
 gem 'jquery-ui-rails'
 gem 'pg'
+gem 'dotenv-rails'
 
 group :production do
   # This helps with serving assets and log files on the heroku platform.
